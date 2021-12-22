@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) =>
 
 export function MainTable( props ) {
     const classes = useStyles();
-    const {headerList, rows} = props;
+    const {headerList, posts} = props;
     return (
         <TableContainer component={Paper}>
             <Table className={classes.table} aria-label="simple table">
@@ -40,7 +40,7 @@ export function MainTable( props ) {
                 </TableHead>
                 {/* ボディ部分 */}
                 <TableBody>
-                    {rows.map((row, index) => (
+                    {posts.map((row, index) => (
                         <TableRow key={index}>
                             {Object.keys(row).map(function(key, i) {
                                 return(

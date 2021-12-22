@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class PostsTableSeeder extends Seeder
 {
@@ -13,7 +14,7 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
-        \DB::table('posts')->insert([
+        DB::table('posts')->insert([
             [
                 'name' => 'とかつ',
                 'content' => 'じゃがりこ',
