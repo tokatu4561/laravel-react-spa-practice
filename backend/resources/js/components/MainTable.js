@@ -40,15 +40,17 @@ export function MainTable( props ) {
                 </TableHead>
                 {/* ボディ部分 */}
                 <TableBody>
-                    {posts.map((row, index) => (
+                    {posts.map((row, index) =>{
+                        let { id, ...post } = row;
+                        return (
                         <TableRow key={index}>
-                            {Object.keys(row).map(function(key, i) {
+                            {Object.keys(post).map(function(key, i) {
                                 return(
                                     <TableCell align="center" key={i}>{row[key]}</TableCell>
                                 );
                             })}
                         </TableRow>
-                    ))}
+                    )})}
                 </TableBody>
             </Table>
         </TableContainer>

@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) =>
 );
 
 
-const headerList = ["id","名前", "タスク内容", "編集", "完了"];
+const headerList = ["名前", "タスク内容", "編集", "完了"];
 
 function Home() {
     const classes = useStyles();
